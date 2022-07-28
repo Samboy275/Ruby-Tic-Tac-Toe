@@ -51,7 +51,6 @@ module Game
       if @player2.is_a?(Computer)
         @player2.move
       else
-        @game_board.draw
         print "#{@player2} enter your move: "
         player2_move = gets.chomp.to_i until @game_board.availab_moves.include?(player2_move)
         @player2.move(player2_move)
